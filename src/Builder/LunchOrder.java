@@ -1,6 +1,8 @@
 package Builder;
 
 public class LunchOrder {
+
+    //we are building the Builder first and then put the Builder in the LunchOrder
     public static class Builder {
         private String bread;
         private String condiments;
