@@ -26,3 +26,6 @@ class MainLazy {
         }
     }
 }
+
+//pros: Object created only when required;
+//cons: Cannot handle multiple threads;

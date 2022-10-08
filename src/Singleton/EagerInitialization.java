@@ -24,3 +24,7 @@ class MainEager {
         }
     }
 }
+
+//Pros: only one object is created
+//cons: exception handling not handled; Object always created;.
+

@@ -28,3 +28,5 @@ public class ThreadSafeSingleton {
         }
     }
 }
+//pros: Multiple threads handled;
+//cons: Performance is slow;

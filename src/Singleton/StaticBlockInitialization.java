@@ -34,3 +34,6 @@ class MainStatic {
         }
     }
 }
+
+//pros: exception handling is handled;
+//cons: Object always created;
