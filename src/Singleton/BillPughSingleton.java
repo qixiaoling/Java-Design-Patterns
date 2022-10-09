@@ -5,11 +5,11 @@ public class BillPughSingleton {
 
     }
     private static class SingletonHelper{
-        private static final BillPughSingleton bill = new BillPughSingleton();
+        private static final BillPughSingleton theOnlyInstance = new BillPughSingleton();
     }
 
     public static BillPughSingleton getInstance(){
-        return SingletonHelper.bill;
+        return SingletonHelper.theOnlyInstance;
     }
 
 }
@@ -17,8 +17,8 @@ public class BillPughSingleton {
 
 class MainBill {
     public static void main(String[] args) {
-        EagerInitialization e1 = EagerInitialization.getInstance();
-        EagerInitialization e2 = EagerInitialization.getInstance();
+        BillPughSingleton e1 = BillPughSingleton.getInstance();
+        BillPughSingleton e2 = BillPughSingleton.getInstance();
 
         if(e1 == e2) {
             System.out.println("Objects are same");

@@ -1,14 +1,14 @@
 package Singleton;
 
 public class EagerInitialization {
-    private static EagerInitialization eager = new EagerInitialization();
+    private static EagerInitialization theOnlyInstance = new EagerInitialization();
 
     private EagerInitialization() {
 
     }
 
     public static EagerInitialization getInstance(){
-        return eager;
+        return theOnlyInstance;
     }
 }
 
@@ -25,6 +25,5 @@ class MainEager {
     }
 }
 
-//Pros: only one object is created
-//cons: exception handling not handled; Object always created;.
+
 

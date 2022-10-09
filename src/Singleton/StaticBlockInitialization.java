@@ -2,21 +2,21 @@ package Singleton;
 
 public class StaticBlockInitialization {
 
-    private static StaticBlockInitialization staticBlock = null;
+    private static StaticBlockInitialization theOnlyInstance = null;
 
     private StaticBlockInitialization(){
 
     }
     static {
         try {
-            staticBlock = new StaticBlockInitialization();
+            theOnlyInstance = new StaticBlockInitialization();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public static StaticBlockInitialization getInstance() {
-        return staticBlock;
+        return theOnlyInstance;
     }
 
 
@@ -24,8 +24,8 @@ public class StaticBlockInitialization {
 
 class MainStatic {
     public static void main(String[] args) {
-        EagerInitialization e1 = EagerInitialization.getInstance();
-        EagerInitialization e2 = EagerInitialization.getInstance();
+        StaticBlockInitialization e1 = StaticBlockInitialization.getInstance();
+        StaticBlockInitialization e2 = StaticBlockInitialization.getInstance();
 
         if(e1 == e2) {
             System.out.println("Objects are same");
@@ -34,6 +34,3 @@ class MainStatic {
         }
     }
 }
-
-//pros: exception handling is handled;
-//cons: Object always created;

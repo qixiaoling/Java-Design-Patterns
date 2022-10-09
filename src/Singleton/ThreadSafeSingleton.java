@@ -1,32 +1,30 @@
 package Singleton;
 
 public class ThreadSafeSingleton {
-    private static ThreadSafeSingleton threadSafeSingleton = null;
+    private static ThreadSafeSingleton theOnlyInstance = null;
 
     private ThreadSafeSingleton(){
 
     }
     public static synchronized ThreadSafeSingleton getInstance(){
-        if(threadSafeSingleton == null) {
-            threadSafeSingleton = new ThreadSafeSingleton();
+        if(theOnlyInstance == null) {
+            theOnlyInstance = new ThreadSafeSingleton();
         }
 
-        return threadSafeSingleton;
+        return theOnlyInstance;
     }
+}
 
+class MainThreadSafe {
+    public static void main(String[] args) {
+        ThreadSafeSingleton e1 = ThreadSafeSingleton.getInstance();
+        ThreadSafeSingleton e2 = ThreadSafeSingleton.getInstance();
 
-    class MainThreadSafe {
-        public static void main(String[] args) {
-            EagerInitialization e1 = EagerInitialization.getInstance();
-            EagerInitialization e2 = EagerInitialization.getInstance();
-
-            if(e1 == e2) {
-                System.out.println("Objects are same");
-            }else {
-                System.out.println("Objects are different");
-            }
+        if(e1 == e2) {
+            System.out.println("Objects are same");
+        }else {
+            System.out.println("Objects are different");
         }
     }
 }
-//pros: Multiple threads handled;
-//cons: Performance is slow;
+

@@ -1,27 +1,27 @@
 package Singleton;
 
 public class DoubleCheckedSingleton {
-    private static DoubleCheckedSingleton doubleCheckedSingleton = null;
+    private static DoubleCheckedSingleton theOnlyInstance = null;
 
     private DoubleCheckedSingleton(){
 
     }
     public static DoubleCheckedSingleton getInstance(){
-        if(doubleCheckedSingleton == null){
+        if(theOnlyInstance == null){
             synchronized (DoubleCheckedSingleton.class){
-                if(doubleCheckedSingleton == null){
-                    doubleCheckedSingleton = new DoubleCheckedSingleton();
+                if(theOnlyInstance == null){
+                    theOnlyInstance = new DoubleCheckedSingleton();
                 }
             }
         }
-        return doubleCheckedSingleton;
+        return theOnlyInstance;
     }
 }
 
 class MainDouble {
     public static void main(String[] args) {
-        EagerInitialization e1 = EagerInitialization.getInstance();
-        EagerInitialization e2 = EagerInitialization.getInstance();
+        DoubleCheckedSingleton e1 = DoubleCheckedSingleton.getInstance();
+        DoubleCheckedSingleton e2 = DoubleCheckedSingleton.getInstance();
 
         if(e1 == e2) {
             System.out.println("Objects are same");
