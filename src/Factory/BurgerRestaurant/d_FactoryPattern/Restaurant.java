@@ -26,3 +26,9 @@ public abstract class Restaurant {
 //the concrete restaurant class implementation they need and the correct burger will be returned to them.
 
 
+//Use it if you have no idea of the exact types of the objects your code will work with. it makes it easy to extend the product construction code independently form the rest of the application, it allows introducing
+//new products without breaking existing code. It centralizes the product creation code in one place in the program.
+
+//But now imagine your burger ordering business is expanding. You decided to open up an Italian restaurant with also Beef and Veggie features.
+//Are you going to split it up? Again your code will be open for modification, and become dependent again on the request object (by using if-else). that is not what you want.
+
