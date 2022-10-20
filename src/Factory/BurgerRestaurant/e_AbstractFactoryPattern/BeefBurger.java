@@ -1,10 +1,6 @@
 package Factory.BurgerRestaurant.e_AbstractFactoryPattern;
 
-public class BeefBurger implements Burger {
+public interface BeefBurger extends Burger {
 
-    @Override
-    public void prepare() {
-        System.out.println("Preparing Beef Burger...");
-
-    }
+    void createBurger();
 }
