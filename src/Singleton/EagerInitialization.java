@@ -17,6 +17,8 @@ class MainEager {
         EagerInitialization e1 = EagerInitialization.getInstance();
         EagerInitialization e2 = EagerInitialization.getInstance();
 
+
+
         if(e1 == e2) {
             System.out.println("Objects are same");
         }else {

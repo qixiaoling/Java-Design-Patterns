@@ -1,6 +1,4 @@
-package Factory;
-
-import java.util.Locale;
+package Factory.Calculation;
 
 public class CalculateFactory {
 

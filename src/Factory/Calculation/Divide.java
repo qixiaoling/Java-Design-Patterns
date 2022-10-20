@@ -1,4 +1,4 @@
-package Factory;
+package Factory.Calculation;
 
 public class Divide implements Calculate{
     @Override

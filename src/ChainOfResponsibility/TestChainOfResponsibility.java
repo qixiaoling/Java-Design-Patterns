@@ -1,7 +1,5 @@
 package ChainOfResponsibility;
 
-import Factory.Calculate;
-
 public class TestChainOfResponsibility {
 
     public static void main(String[] args) {

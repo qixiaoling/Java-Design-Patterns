@@ -1,4 +1,4 @@
-package Factory;
+package Factory.Calculation;
 
 import java.util.Scanner;
 //Program to interface, so you can re-use the method

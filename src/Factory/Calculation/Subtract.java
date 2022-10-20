@@ -1,4 +1,4 @@
-package Factory;
+package Factory.Calculation;
 
 public class Subtract implements Calculate{
     @Override
