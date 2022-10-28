@@ -18,6 +18,4 @@ public class Restaurant {
         restaurant.orderBurger("BEEF");
     }
 }
-//when things change,for example if we add new receipies to the menu or add more product to our restaurant,
-// we are going to have to open this code and change it, and that violate our open/close, single responsibility principles.
-//we are also making changes in serval places in the app making things worse.
+

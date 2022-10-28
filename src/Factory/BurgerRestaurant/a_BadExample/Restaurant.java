@@ -1,15 +1,15 @@
 package Factory.BurgerRestaurant.a_BadExample;
 
 public class Restaurant {
-    public void orderBurger(String request){
+    public ??? orderBurger(String request){
         if("BEEF".equals(request)){
-            BeefBurger beefBurger = new BeefBurger();
-            beefBurger.prepare();
-            //return beefBurger;
+            BeefBurger burger = new BeefBurger();
+            burger.prepare();
+            return burger;
         } else if("VEGGIE".equals(request)){
-            VeggieBurger veggieBurger = new VeggieBurger();
-            veggieBurger.prepare();
-            //return veggieBurger;
+            VeggieBurger burger = new VeggieBurger();
+            burger.prepare();
+            return burger;
 
         }
     }
