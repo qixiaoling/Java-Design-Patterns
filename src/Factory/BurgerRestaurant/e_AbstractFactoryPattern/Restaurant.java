@@ -18,7 +18,7 @@ public abstract class Restaurant {
 
 
 
-        System.out.println(americanBeefBurger, americanVeggieBurger, italianVeggieBurger, italianBeefBurger);
+        //System.out.println(americanBeefBurger, americanVeggieBurger, italianVeggieBurger, italianBeefBurger);
 
     }
 
