@@ -1,4 +1,4 @@
-package Commend.after;
+package Command.after;
 
 public class MultiplyCommand implements Command{
 

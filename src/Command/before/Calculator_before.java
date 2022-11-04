@@ -1,4 +1,4 @@
-package Commend.before;
+package Command.before;
 
 public class Calculator_before {
     private int value;
