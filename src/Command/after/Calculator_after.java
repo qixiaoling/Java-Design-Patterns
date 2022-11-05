@@ -24,17 +24,17 @@ public class Calculator_after {
     }
 
     public static void main(String[] args) {
-        Calculator_after calculator_after_1 = new Calculator_after();
-        calculator_after_1.executeCommand(new AddCommand(10));
-        System.out.println(calculator_after_1.value);
-        calculator_after_1.executeUndo();
-        System.out.println(calculator_after_1.value);
+        Calculator_after calculator_after = new Calculator_after();
+        calculator_after.executeCommand(new AddCommand(10));
+        System.out.println(calculator_after.value);
+        calculator_after.executeUndo();
+        System.out.println(calculator_after.value);
 
-        Calculator_after calculator_after_2 = new Calculator_after();
-        calculator_after_2.executeCommand(new AddThenMultiplyCommand(1, 2));
-        System.out.println(calculator_after_2.value);
-        calculator_after_2.executeUndo();
-        System.out.println(calculator_after_2.value);
+        Calculator_after calculator_after_chained = new Calculator_after();
+        calculator_after_chained.executeCommand(new AddThenMultiplyCommand(1, 2));
+        System.out.println(calculator_after_chained.value);
+        calculator_after_chained.executeUndo();
+        System.out.println(calculator_after_chained.value);
     }
 
 
