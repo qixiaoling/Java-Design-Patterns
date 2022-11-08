@@ -1,5 +1,7 @@
 package Command.after;
 
+import java.sql.SQLOutput;
+
 public class AddThenMultiplyCommand implements Command{
 
 
@@ -26,8 +28,9 @@ public class AddThenMultiplyCommand implements Command{
 
     public static void main(String[] args) {
         AddThenMultiplyCommand addThenMultiplyCommand = new AddThenMultiplyCommand(1, 2);
-        int resultOfThat = addThenMultiplyCommand.execute(10);
-        System.out.println(addThenMultiplyCommand.undo(resultOfThat));
+        int resultOfChainedCommand = addThenMultiplyCommand.execute(10);
+        System.out.println(resultOfChainedCommand);
+        System.out.println(addThenMultiplyCommand.undo(resultOfChainedCommand));
 
 
     }

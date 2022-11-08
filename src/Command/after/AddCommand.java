@@ -2,14 +2,14 @@ package Command.after;
 
 public class AddCommand implements Command{
 
-    private int valueToAdd;//10
+    private int valueToAdd;
 
     public AddCommand(int valueToAdd) {
         this.valueToAdd = valueToAdd;
     }
 
     @Override
-    public int execute(int currentValue) { //0
+    public int execute(int currentValue) {
         return currentValue + this.valueToAdd;
     }
 

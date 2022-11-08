@@ -14,13 +14,11 @@ public class Calculator_after {
     public void executeCommand (Command command) {
         this.currentValue = command.execute(this.currentValue);
         this.history.add(command);
-        //record what was the last operation
     }
 
     public void executeUndo() {
         Command command = this.history.remove(history.size()-1);
         this.currentValue = command.undo(this.currentValue);
-        //the last operation command, please do an undo function of that particular command.
     }
 
     public static void main(String[] args) {
