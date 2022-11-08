@@ -20,7 +20,7 @@ public class AddCommand implements Command{
 
     public static void main(String[] args) {
         Command command = new AddCommand(10);
-        int newValue = command.execute(10);
+        int newValue = command.execute(0);
         System.out.println(command.undo(newValue));
 
     }

@@ -18,7 +18,7 @@ public class Calculator_after {
     }
 
     public void executeUndo() {
-        Command command = this.history.remove(0);
+        Command command = this.history.remove(history.size()-1);
         this.value = command.undo(this.value);
         //the last operation command, please do an undo function of that particular command.
     }
