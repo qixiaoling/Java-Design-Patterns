@@ -1,6 +1,5 @@
-package Observer;
+package Observer.example_One;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class PostOffice implements Subject {

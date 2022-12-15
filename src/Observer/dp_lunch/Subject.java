@@ -1,4 +1,5 @@
-package Observer;
+package Observer.dp_lunch;
+
 
 public interface Subject {
     void attach (Observer o);

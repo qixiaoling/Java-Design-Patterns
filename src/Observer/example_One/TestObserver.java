@@ -1,4 +1,4 @@
-package Observer;
+package Observer.example_One;
 
 public class TestObserver {
     public static void main(String[] args) {
