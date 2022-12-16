@@ -1,4 +1,4 @@
-package Observer.example_One;
+package Observer.postOffice;
 
 import java.util.ArrayList;
 

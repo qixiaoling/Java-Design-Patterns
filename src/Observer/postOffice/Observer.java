@@ -1,4 +1,4 @@
-package Observer.dp_lunch;
+package Observer.postOffice;
 
 public interface Observer {
     void update(Object o);

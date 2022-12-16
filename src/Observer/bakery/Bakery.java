@@ -1,10 +1,9 @@
-package Observer.dp_lunch;
+package Observer.bakery;
 
-import Observer.dp_lunch.Observer;
 
 import java.util.ArrayList;
 
-public class Bakery implements Subject {
+public class Bakery implements Business {
 
     private ArrayList<Cake> allCake;
     private ArrayList<Observer> observers;
@@ -14,7 +13,7 @@ public class Bakery implements Subject {
         observers = new ArrayList<>();
     }
     //third: add mail, when this new mail is added, postoffice need to nodify everyone;
-    public void addMail(Cake cake){
+    public void addCake(Cake cake){
         allCake.add(cake);
         Notify();
     }
@@ -27,6 +26,7 @@ public class Bakery implements Subject {
     @Override
     public void attach(Observer o) {
         observers.add(o);
+
     }
 
     @Override

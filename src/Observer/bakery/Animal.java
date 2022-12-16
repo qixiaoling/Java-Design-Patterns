@@ -1,19 +1,21 @@
-package Observer.example_One;
+package Observer.bakery;
+
+
 
 import java.util.ArrayList;
 
-public class Person implements Observer{
+public class Animal implements Observer {
     String name;
 
-    public Person(String name) {
+    public Animal(String name) {
         this.name = name;
     }
 
     //sixth: this is the real activity, if name on the mail is same as this person, print it on the screen.
-    public void checkMail(ArrayList<Mail> m){
-        for (int i=0; i<m.size(); i++){
-            if(name.compareTo(m.get(i).receiverName) == 0){
-                System.out.println(name + ": " + m.get(i).content);
+    public void checkCake(ArrayList<Cake> cakes){
+        for (int i=0; i<cakes.size(); i++){
+            if(name.compareTo(cakes.get(i).receiverName) == 0){
+                System.out.println(name + ": " + cakes.get(i).flavour);
             }
         }
     }
@@ -23,9 +25,9 @@ public class Person implements Observer{
     //the checkMail method;
     @Override
     public void update(Object obj) {
-        if(obj instanceof PostOffice){
-            PostOffice po = (PostOffice) obj;
-            checkMail(po.getAllMail());
+        if(obj instanceof Bakery){
+            Bakery bakery = (Bakery) obj;
+            checkCake(bakery.getAllCake());
         }
     }
 }

@@ -1,5 +1,4 @@
-package Observer.dp_lunch;
-
+package Observer.postOffice;
 
 public interface Subject {
     void attach (Observer o);

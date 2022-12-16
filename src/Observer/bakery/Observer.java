@@ -1,4 +1,4 @@
-package Observer.example_One;
+package Observer.bakery;
 
 public interface Observer {
     void update(Object o);

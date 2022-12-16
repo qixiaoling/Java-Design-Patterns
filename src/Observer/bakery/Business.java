@@ -1,6 +1,6 @@
-package Observer.example_One;
+package Observer.bakery;
 
-public interface Subject {
+public interface Business {
     void attach (Observer o);
     void detach (Observer o);
     void Notify();
