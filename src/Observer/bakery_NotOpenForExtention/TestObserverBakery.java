@@ -1,4 +1,4 @@
-package Observer.bakery;
+package Observer.bakery_NotOpenForExtention;
 
 
 public class TestObserverBakery {

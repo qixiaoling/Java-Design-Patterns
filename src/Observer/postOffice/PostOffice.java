@@ -35,7 +35,6 @@ public class PostOffice implements Subject {
 
     //fourth: notify = let Chris and John uses update method. The object passes in is only
     //defined from the angel of Person, person can decide which subject he wants to get notified from (can also be an CD store),
-    //in this case : postoffice;
     @Override
     public void Notify() {
         for(int i=0; i<observers.size();i++){

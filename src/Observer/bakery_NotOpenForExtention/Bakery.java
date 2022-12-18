@@ -1,4 +1,4 @@
-package Observer.bakery;
+package Observer.bakery_NotOpenForExtention;
 
 
 import java.util.ArrayList;
@@ -12,7 +12,6 @@ public class Bakery implements Business {
         allCake = new ArrayList<>();
         observers = new ArrayList<>();
     }
-    //third: add mail, when this new mail is added, postoffice need to nodify everyone;
     public void addCake(Cake cake){
         allCake.add(cake);
         Notify();
@@ -21,8 +20,6 @@ public class Bakery implements Business {
         return allCake;
     }
 
-    //first: postoffice add people who wants to get notified; add Chris;
-    //second: add John;
     @Override
     public void attach(Observer o) {
         observers.add(o);
@@ -34,9 +31,6 @@ public class Bakery implements Business {
         observers.remove(o);
     }
 
-    //fourth: notify = let Chris and John uses update method. The object passes in is only
-    //defined from the angel of Person, person can decide which subject he wants to get notified from (can also be an CD store),
-    //in this case : postoffice;
     @Override
     public void Notify() {
         for(int i=0; i<observers.size();i++){

@@ -19,7 +19,7 @@ public class Person implements Observer{
     }
     //fifth: update method is only checking if this obj from Person angel is
     //a postoffice, (it can of course also be an CD store, we code to interface here)
-    // becuase then it will fetch postoffice's maillist and passed in
+    // because then it will fetch postoffice's maillist and passed in
     //the checkMail method;
     @Override
     public void update(Object obj) {
