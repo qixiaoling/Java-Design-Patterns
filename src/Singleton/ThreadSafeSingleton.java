@@ -2,15 +2,11 @@ package Singleton;
 
 public class ThreadSafeSingleton {
     private static ThreadSafeSingleton theOnlyInstance = null;
-
-    private ThreadSafeSingleton(){
-
-    }
+    private ThreadSafeSingleton(){}
     public static synchronized ThreadSafeSingleton getInstance(){
         if(theOnlyInstance == null) {
             theOnlyInstance = new ThreadSafeSingleton();
         }
-
         return theOnlyInstance;
     }
 }

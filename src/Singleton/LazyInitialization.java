@@ -2,10 +2,7 @@ package Singleton;
 
 public class LazyInitialization {
     private static LazyInitialization theOnlyInstance = null;
-
-    private LazyInitialization(){
-
-    }
+    private LazyInitialization(){}
     public static LazyInitialization getInstance(){
         if(theOnlyInstance == null){
             theOnlyInstance = new LazyInitialization();

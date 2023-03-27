@@ -1,13 +1,10 @@
 package Singleton;
 
 public class BillPughSingleton {
-    private BillPughSingleton(){
-
-    }
+    private BillPughSingleton(){}
     private static class SingletonHelper{
         private static final BillPughSingleton theOnlyInstance = new BillPughSingleton();
     }
-
     public static BillPughSingleton getInstance(){
         return SingletonHelper.theOnlyInstance;
     }

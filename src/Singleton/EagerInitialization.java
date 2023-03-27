@@ -2,11 +2,7 @@ package Singleton;
 
 public class EagerInitialization {
     private static EagerInitialization theOnlyInstance = new EagerInitialization();
-
-    private EagerInitialization() {
-
-    }
-
+    private EagerInitialization() {}
     public static EagerInitialization getInstance(){
         return theOnlyInstance;
     }

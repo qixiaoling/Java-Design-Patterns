@@ -7,7 +7,6 @@ public class FanOffState extends State{
         this.fan = fan;
     }
 
-    //fourth: Now it changes the "state" to fanLowState and print out "off, turning fan on to low".
     @Override
     public void handleRequest() {
         System.out.println("Turning fan on to low.");

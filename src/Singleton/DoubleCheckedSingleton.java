@@ -2,18 +2,13 @@ package Singleton;
 
 public class DoubleCheckedSingleton {
     private static DoubleCheckedSingleton theOnlyInstance = null;
-
-    private DoubleCheckedSingleton(){
-
-    }
+    private DoubleCheckedSingleton(){}
     public static DoubleCheckedSingleton getInstance(){
         if(theOnlyInstance == null){
             synchronized (DoubleCheckedSingleton.class){
                 if(theOnlyInstance == null){
                     theOnlyInstance = new DoubleCheckedSingleton();
-                }
-            }
-        }
+                }}}
         return theOnlyInstance;
     }
 }

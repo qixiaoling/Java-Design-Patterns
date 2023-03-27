@@ -1,11 +1,8 @@
 package Singleton;
 
 public class StaticBlockInitialization {
-
     private static StaticBlockInitialization theOnlyInstance = null;
-
     private StaticBlockInitialization(){
-
     }
     static {
         try {
@@ -14,7 +11,6 @@ public class StaticBlockInitialization {
             e.printStackTrace();
         }
     }
-
     public static StaticBlockInitialization getInstance() {
         return theOnlyInstance;
     }
